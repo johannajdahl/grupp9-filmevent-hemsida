@@ -1,0 +1,526 @@
+@charset "UTF-8";
+
+/* CSS FÖR DATOR */
+@media (min-width: 979px) {
+    body {
+        min-height: 100vh;
+        min-width: 100vw;
+        margin:0;
+    }
+
+        /* ÖVERGRIPANDE STYLING */
+            h1 {
+                color: #fcf6c1;
+                font-size: 77pt;
+                font-family: "Futura", 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+                margin-top: 0;
+                padding-top: 200px;
+            }
+
+            h2 {
+                font-family: "futura-pt-condensed", sans-serif;
+                font-style: normal;
+                font-size: 3.5em;
+                color: #d8871c;
+            }
+
+            p {
+                font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+                font-weight: 600;
+                text-align: left;
+            }
+
+
+        /* ÖVERGRIPANDE CONTAINER */
+            .layout {
+                min-height: 100vh;
+                min-width: 100vw;
+                background-image: url(bilder/textured-background-beige-hogre.png); 
+                background-size: 100%;
+                display: grid;
+                grid-template-columns: 150px auto 250px;
+                grid-template-areas: 
+                'meny startsida side'
+                'meny trailer side'
+                'meny omfilmen side'
+                'meny utstallning side' 
+                'footer footer side'
+            }
+
+        /* STYLING FÖR NAVIGATIONSMENY */
+            .navigation {
+                grid-area: meny;
+                display: grid;
+                align-items: center;
+                }
+
+                .hamburger {
+                    visibility: hidden;
+                    }
+
+            nav { 
+                font-family: "futura-pt-condensed", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                margin-top: -50px;
+                font-size: 1.5em;
+                position: fixed;
+                top: 45%;
+            }
+
+            nav li {
+                list-style: none;
+                text-align: left;
+            }
+
+            a {
+                color: black;
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+
+        /* STYLING FÖR SIDEBAR */
+            .layoutside {
+                grid-area: side;
+                padding: 5%;
+                background-image: url(bilder/textured-background-orange-cut.png);
+                background-size: 100%;
+            }
+
+            .layoutside h2 {
+                color:#fcf6c1;
+                font-family: "futura-pt-condensed", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                margin-top: -50px;
+                font-size: 3.5em;
+            }
+
+            .layoutside h3 {
+                color:#fcf6c1;
+                font-size: 2em;
+                font-family: "futura-pt-condensed", sans-serif;
+                font-weight: 400;
+                font-style: normal;    
+                margin-top: 0px;
+            }
+
+            .layoutside h4 {
+                color:#fcf6c1;
+                font-size: 1.5em;
+                font-family: "futura-pt-condensed", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                margin-bottom: 0;
+                text-decoration-line: underline;
+            }
+
+            .layoutside p {
+                color:#fcf6c1;
+                font-size: 50%;
+                font-family: "futura-pt-condensed", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+            }
+
+            #datum {
+                font-family: "futura-pt-condensed", sans-serif;
+                font-weight: 700;
+                font-size: 5em;
+                font-style: normal;
+                line-height: 1em;
+                padding-top: -45px;
+            }
+
+            #bio {
+                font-family: "futura-pt-condensed", sans-serif;
+                font-style: normal;
+                font-size: 3.5em;
+                padding-bottom: -55px;
+            }
+
+
+        /* STYLING FÖR INDEX */
+            .indexlayout {
+                grid-area: startsida;
+                padding-left: 10%;
+                padding-right: 10%;
+                text-align: center;    
+            }
+
+
+        /* STYLING FÖR START */
+            .cointainer.start {
+                grid-area: startsida;
+                place-items: center;
+            }
+
+            #start {
+                filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 0.4));
+                padding-top: 200px;
+                padding-bottom: 200px;
+                transform: scale(1.1);
+            }
+
+            
+        /* STYLING FÖR TRAILER */
+            .container.trailer {
+                grid-area: trailer;
+            }
+
+            #setrailer {
+                padding-top: 200px;
+                padding-bottom: 200px;
+            }
+
+            iframe {
+                width: 100%;
+                aspect-ratio: 16 / 9;
+                border: none;
+            }
+            
+        /* STYLING FÖR OM FILMEN */
+        .container.omfilmen {
+            grid-area: omfilmen;
+        }
+
+        #omfilmen {
+            padding-top: 200px;
+        }
+
+        .omfilmen2 {
+            padding-bottom: 200px;
+            font-family: "futura-pt-condensed", sans-serif;
+            font-style: normal;
+            font-size: 1.4em;
+            padding-left: 30px;
+            font-weight: normal;
+        }
+
+        .omfilmen3 {
+            float: right;
+            width: 33%;
+        }
+
+
+        /* STYLING FÖR UTSTÄLLNINGEN */
+        .container.utstallning {
+                grid-area: utstallning;
+            }
+
+        #utstallning {
+            padding-top: 100px;
+        }
+
+        .utstallning2 {
+            font-family: "futura-pt-condensed", sans-serif;
+            font-style: normal;
+            font-size: 1.4em;
+            padding-left: 30px;
+            font-weight: normal;
+        }
+
+        .image {
+            padding-bottom: 100px;
+            width: 25%;
+        }
+
+        .image2 {
+            width: 25%;
+        }
+
+        /* STYLING FÖR FOOTER */
+        .footerlayout {
+            grid-area: footer;
+            text-align: center;
+            color: #fcf6c1;
+            font-family: "futura-pt-condensed", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            background-image: url(bilder/textured-background-footer.png);
+            height: 70px;
+            }
+
+        .footertext {
+            font-family: "futura-pt-condensed", sans-serif;
+            font-style: normal;
+            font-size: 1.4em;
+            padding-left: 30px;
+            font-weight: normal;
+        }
+    
+            
+
+}
+
+/* CSS FÖR MOBIL */
+@media (max-width: 980px){
+
+     /* ÖVERGRIPANDE STYLING */
+     h1 {
+        color: #fcf6c1;
+        font-size: 77pt;
+        font-family: "Futura", 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+        margin-top: 0;
+        padding-top: 200px;
+    }
+
+    h2 {
+        font-family: "futura-pt-condensed", sans-serif;
+        font-style: normal;
+        font-size: 2.5em;
+        color: #d8871c;
+    }
+
+    p {
+        font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+        font-weight: 600;
+        text-align: left;
+    }
+
+
+/* ÖVERGRIPANDE CONTAINER */
+    .layout {
+        min-height: 100vh;
+        min-width: 100vw;
+        background-image: url(bilder/textured-background-beige-hogre.png); 
+        background-size: 100%;
+        display: grid;
+        grid-template-columns: auto 120px;
+        grid-template-areas: 
+        'startsida side'
+        'trailer side'
+        'bokabio side'
+        'omfilmen side'
+        'utstallning side'
+        'footer side';    
+    }
+
+
+/* STYLING FÖR NAVIGATIONSMENY */
+
+
+    .hamburger {
+        cursor: pointer;
+        grid-area: startsida;
+        display: grid;
+        align-items: top;
+        height: 60px;
+        position: fixed;
+        background-color: transparent;
+        border: none;
+        font-size: 50px;
+        color: rgb(81, 35, 0);
+        }
+
+    .navigation { 
+        display: none;
+        font-family: "futura-pt-condensed", sans-serif;
+        font-weight: 400; 
+        font-style: normal;
+        margin-top: -50px;
+        font-size: 1.5em;
+        position: fixed;
+        top: 5%;
+    }
+
+    nav li {
+        list-style: none;
+        text-align: left;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+
+/* STYLING FÖR SIDEBAR */
+    .layoutside {
+        grid-area: side;
+        padding: 5%;
+        background-image: url(bilder/textured-background-orange-cut.png);
+        background-size: 100%;
+    }
+
+    .layoutside h2 {
+        color:#fcf6c1;
+        font-family: "futura-pt-condensed", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        margin-top: -50px;
+        font-size: em;
+    }
+
+    .layoutside h3 {
+        color:#fcf6c1;
+        font-size: 1.5em;
+        font-family: "futura-pt-condensed", sans-serif;
+        font-weight: 400;
+        font-style: normal;    
+        margin-bottom: 40px;
+    }
+
+    .layoutside h4 {
+        color:#fcf6c1;
+        font-size: 1.5em;
+        font-family: "futura-pt-condensed", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        margin-top: 40px;
+        margin-bottom: -20px;
+        text-decoration-line: underline;
+    }
+
+    .layoutside p {
+        color:#fcf6c1;
+        font-size: 50%;
+        font-family: "futura-pt-condensed", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    #datum {
+        font-family: "futura-pt-condensed", sans-serif;
+        font-weight: 700;
+        font-size: 3em;
+        font-style: normal;
+        line-height: 1em;
+        padding-top: -45px;
+    }
+
+    #bio {
+        font-family: "futura-pt-condensed", sans-serif;
+        font-style: normal;
+        font-size: 3em;
+    
+    }
+
+
+/* STYLING FÖR INDEX */
+    .indexlayout {
+        grid-area: startsida;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 10%;
+        text-align: center;    
+    }
+
+
+/* STYLING FÖR START */
+    .cointainer.start {
+        grid-area: startsida;
+        place-items: center;
+    }
+
+    #start {
+        filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 0.4));
+        padding-top: 200px;
+        padding-bottom: 200px;
+        transform: scale(1.1);
+    }
+
+    
+/* STYLING FÖR TRAILER */
+    .container.trailer {
+        grid-area: trailer;
+    }
+
+    #setrailer {
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+
+    iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border: none;
+    }
+
+    
+/* STYLING FÖR OM FILMEN */
+.container.omfilmen {
+    grid-area: omfilmen;
+}
+
+#omfilmen {
+    padding-top: 10px;
+}
+
+.omfilmen2 {
+    padding-bottom: 10px;
+    font-family: "futura-pt-condensed", sans-serif;
+    font-style: normal;
+    font-size: 1.4em;
+    padding-left: 30px;
+    font-weight: normal;
+}
+
+.omfilmen3 {
+    float: right;
+    width: 33%;
+}
+
+.container.omfilmen p {
+    grid-area: omfilmen;
+    padding-bottom: 100px; /* JAG FÅR INTE DETTA ATT FUNKA */
+}
+
+/* STYLING FÖR UTSTÄLLNINGEN */
+.container.utstallning {
+        grid-area: ustallning;
+    }
+
+#utstallning {
+    padding-top: 200px;
+}
+
+.utstallning2 {
+    padding-bottom: 10px;
+    font-family: "futura-pt-condensed", sans-serif;
+    font-style: normal;
+    font-size: 1.4em;
+    padding-left: 30px;
+    font-weight: normal;
+}
+
+.image {
+    padding-bottom: 100px;
+    width: 25%;
+}
+
+.image2 {
+    width: 25%;
+}
+
+/* STYLING FÖR FOOTER */
+    .footerlayout {
+        grid-area: footer;
+        padding: 0;
+        bottom: 0;
+        color: black;
+        font-family: "futura-pt-condensed", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        background-image: url(bilder/textured-background-mindre.jpg);
+    }
+
+    .footertext {
+        font-family: "futura-pt-condensed", sans-serif;
+        font-style: normal;
+        font-size: 1.4em;
+        padding-left: 30px;
+        font-weight: normal;
+        color: #fcf6c1;
+    }
+}
